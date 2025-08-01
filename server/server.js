@@ -21,8 +21,5 @@ app.get('/',(req,res)=>res.send("API working fine"));
 app.use('/api/auth',authRouter)
 app.use('/api/user',userRouter)
 
-if(process.env.NODE_ENV !== "production"){
-    app.listen(port, ()=>console.log(`server started on port : ${port}`));
-}
-// export server for vercel
-export default server
+
+app.listen(port, ()=>console.log(`server started on port : ${port}`));
